@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8841798954530258841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8841798954530258842}
+  - component: {fileID: 2858469283422625867}
+  - component: {fileID: 4331414937515088581}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8841798954530258842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841798954530258841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2858469283422625867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841798954530258841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b19274cde53ad42983bdbbeb6ae348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coins: 1000
+  _energy: 25
+  _shield: 3
+  _minutes: 6
+  _BuildingDetails:
+  - {fileID: 4392308535982336351, guid: f59c488c2ec73ba409d6f966c7ba337f, type: 3}
+  - {fileID: 8517595633350886399, guid: 781d4198922894045a2206973411d7ee, type: 3}
+  - {fileID: 626322560244836501, guid: 37742d675c514f6449e1e69bf5d5c377, type: 3}
+  - {fileID: 2538644596910772002, guid: 48941b9133b9dee468b7c66c2621adfb, type: 3}
+  - {fileID: 8932317976392980457, guid: 816b0a056c0b711439c7465c93b75b47, type: 3}
+  _BuildingTypes: 0000000001000000020000000300000004000000
+  _PositionDetails:
+  - {x: -89, y: 3, z: -145.5}
+  - {x: -161.4752, y: 61, z: 122.433}
+  - {x: 0, y: 92.3, z: 379.6}
+  - {x: 177.157, y: 55.5, z: 89.9567}
+  - {x: 168, y: 44, z: -86}
+  _RotationList:
+  - {x: 0, y: 0.98997194, z: 0, w: 0.14126414}
+  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: 0, y: 0.7889179, z: 0, w: -0.6144986}
+  _BuildingUpgradationLevel: 
+  _BuildingCost: e8030000d0070000b80b0000a00f000088130000
+  _BuildingShield: 0100010000
+  _TargetMarkPost:
+  - {x: -6, y: 8, z: -44}
+  - {x: -9.2, y: 17.3, z: -21.21}
+  - {x: 0.2, y: 34.1, z: -10}
+  - {x: 11, y: 16.9, z: -23}
+  - {x: 6.1, y: 11.4, z: -41.7}
+  OpenHandCardsPositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  OpenHandCardsVectorPositions:
+  - {x: -60, y: 72, z: -420.5}
+  - {x: -30, y: 72, z: -420.5}
+  - {x: 0, y: 72, z: -420.5}
+  - {x: 30, y: 72, z: -420.5}
+  - {x: 60, y: 72, z: -420.5}
+  _maxEnergy: 50
+--- !u!114 &4331414937515088581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841798954530258841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c765c59ad5883e429f123cae878690a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSceneIndex: 0
+  nextSceneIndex: 0
