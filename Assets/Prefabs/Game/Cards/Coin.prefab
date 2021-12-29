@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2070511690500136970}
   - component: {fileID: 2070511690500136971}
   - component: {fileID: -5324241622514142462}
+  - component: {fileID: 8133247921228449501}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coins
@@ -91,3 +92,18 @@ MonoBehaviour:
   _cardID: 0
   _cardType: 5
   _Position: {x: 0, y: 0, z: 0}
+--- !u!111 &8133247921228449501
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070511690500136972}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2594462165290771481}
   - component: {fileID: 2594462165290771486}
   - component: {fileID: 922653091542561273}
+  - component: {fileID: 5175131516936648018}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -91,3 +92,18 @@ MonoBehaviour:
   _cardID: 0
   _cardType: 2
   _Position: {x: 0, y: 0, z: 0}
+--- !u!111 &5175131516936648018
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2594462165290771487}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

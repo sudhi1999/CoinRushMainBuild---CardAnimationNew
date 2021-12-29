@@ -1,3 +1,5 @@
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -50,8 +52,11 @@ public class CardDeck : MonoBehaviour
     int positionNumber = 0;
     int newCardIndex = 0;
 
-    public GameObject cardDeckAnimation;
+    public GameObject cardDeckAnimation2D;
+    public GameObject cardDeckAnimation3D;
     bool mMakeDrawBtnEnable=true;
+
+    ScriptedCards cards;
 
     private void Start()
     {
@@ -79,7 +84,7 @@ public class CardDeck : MonoBehaviour
         _CardList.Clear();
         _jokerList.Clear();
         newCardIndex=0;
-        cardDeckAnimation.SetActive(false);
+        cardDeckAnimation2D.SetActive(false);
         mCardListGameObject.Clear();
         GameManager.Instance._SavedCardTypes.Clear();//Clear the card type list in gameManager
     }
@@ -226,7 +231,8 @@ public class CardDeck : MonoBehaviour
 
         Camera.main.GetComponent<CameraController>().DrawButtonClicked();
 
-        ScriptedCards cards = mScriptedCards[Random.Range(0, mScriptedCards.Count)];
+        cards = mScriptedCards[Random.Range(0, mScriptedCards.Count)];
+        cardDeckAnimation3D.SetActive(true);
 
         /*GameObject card = Instantiate(cards._cardModel, _playerHandPoints[clicks].localPosition, _playerHandPoints[clicks].localRotation, mCardHolderParent.transform);
         Cards cardDetails = card.GetComponent<Cards>();
@@ -239,16 +245,26 @@ public class CardDeck : MonoBehaviour
         AddNewCard(card.GetComponent<Cards>(), card);
         ReplacementOfCards();
         CardCheckingFunction();*/
-        InstantiateCard(cards);
+        Invoke("Test", 1.01f);
     }
+
+    void Test()
+    {
+        InstantiateCard(cards);
+        cardDeckAnimation3D.SetActive(false);
+    }
+
 
     public void InstantiateCard(ScriptedCards inCard, bool isSavedCard = false)
     {
-        cardDeckAnimation.SetActive(true);
+        GameObject card = Instantiate(inCard._cardModel, _playerHandPoints[clicks].localPosition + Vector3.left * 1200, _playerHandPoints[clicks].localRotation, mCardHolderParent.transform);
 
-        GameObject card = Instantiate(inCard._cardModel, _playerHandPoints[clicks].localPosition+Vector3.left*1200, _playerHandPoints[clicks].localRotation, mCardHolderParent.transform);
-        cardDeckAnimation.GetComponent<CardDeckAnimation>().cardSprite = card.GetComponent<Image>().sprite;
-        cardDeckAnimation.GetComponent<CardDeckAnimation>().SpriteChange();
+
+
+        cardDeckAnimation2D.SetActive(true);
+
+        cardDeckAnimation2D.GetComponent<CardDeckAnimation>().cardSprite = card.GetComponent<Image>().sprite;
+        cardDeckAnimation2D.GetComponent<CardDeckAnimation>().SpriteChange();
         Cards cardDetails = card.GetComponent<Cards>();
 
         cardDetails._cardType = inCard._cardType;
@@ -270,7 +286,7 @@ public class CardDeck : MonoBehaviour
             if (_CardList[i]._cardType == inNewCard._cardType && _CardList[i]._cardType != CardType.JOKER)
             {
                 _CardList.Insert(i, inNewCard);
-                newCardIndex = i;
+                newCardIndex = i;             
                 /*if (!isSavedCard)
                     GameManager.Instance._SavedCardTypes.Insert(i, (int)inNewCard._cardType);//inserting card data to game Manager*/
                 return;
@@ -334,7 +350,7 @@ public class CardDeck : MonoBehaviour
         }
 
         Debug.Log(_RotationList[newCardIndex]);
-        cardDeckAnimation.GetComponent<CardDeckAnimation>().OnPos(_PositionList[newCardIndex], _RotationList[newCardIndex].z);
+        cardDeckAnimation2D.GetComponent<CardDeckAnimation>().OnPos(_PositionList[newCardIndex], _RotationList[newCardIndex].z);
 
         Invoke("CardShufflingDelay", .6f);
         Invoke("CardGenerationDelay", 1.4f);
@@ -355,7 +371,7 @@ public class CardDeck : MonoBehaviour
             }
             else
             {
-                cardDeckAnimation.transform.SetSiblingIndex(i + 1);
+                cardDeckAnimation2D.transform.SetSiblingIndex(i + 1);
                 //StartCoroutine(CardGenerationDelay(i));
             }
 
@@ -368,7 +384,7 @@ public class CardDeck : MonoBehaviour
         _CardList[newCardIndex].transform.localPosition = _PositionList[newCardIndex];
         _CardList[newCardIndex].transform.localEulerAngles = _RotationList[newCardIndex];
         _CardList[newCardIndex].transform.SetSiblingIndex(newCardIndex + 1);
-        cardDeckAnimation.SetActive(false);
+        cardDeckAnimation2D.SetActive(false);
         mMakeDrawBtnEnable = true;
  
     }

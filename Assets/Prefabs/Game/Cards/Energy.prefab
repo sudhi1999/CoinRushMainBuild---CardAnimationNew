@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5692372873059748242}
   - component: {fileID: 5692372873059748253}
   - component: {fileID: 2424974148161387616}
+  - component: {fileID: 5292125557370480072}
   m_Layer: 0
   m_Name: Energy
   m_TagString: Energy
@@ -91,3 +92,18 @@ MonoBehaviour:
   _cardID: 0
   _cardType: 4
   _Position: {x: 0, y: 0, z: 0}
+--- !u!111 &5292125557370480072
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5692372873059748252}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1049319272675060267}
   - component: {fileID: 1049319272675060276}
   - component: {fileID: -7336842119353226528}
+  - component: {fileID: 5676835569532797778}
   m_Layer: 0
   m_Name: Joker
   m_TagString: Untagged
@@ -91,3 +92,18 @@ MonoBehaviour:
   _cardID: 0
   _cardType: 3
   _Position: {x: 0, y: 0, z: 0}
+--- !u!111 &5676835569532797778
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049319272675060277}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

@@ -414,6 +414,7 @@ GameObject:
   - component: {fileID: 8047310876633728071}
   - component: {fileID: 8047310876633728070}
   - component: {fileID: -515974315606937935}
+  - component: {fileID: 4220180061482758775}
   m_Layer: 0
   m_Name: FortuneWheel
   m_TagString: Fortunewheel
@@ -496,3 +497,18 @@ MonoBehaviour:
   _cardID: 0
   _cardType: 6
   _Position: {x: 0, y: 0, z: 0}
+--- !u!111 &4220180061482758775
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8047310876633728073}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
