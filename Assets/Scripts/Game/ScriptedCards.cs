@@ -4,7 +4,7 @@ using UnityEngine;
 public class ScriptedCards : ScriptableObject
 {
     public CardType _cardType;
-
+    public Texture _cardTex;
     public GameObject _cardModel; 
 
     public int _amount; //Amount of coins it provides

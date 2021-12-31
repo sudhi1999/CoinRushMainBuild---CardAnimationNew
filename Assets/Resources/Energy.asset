@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Energy
   m_EditorClassIdentifier: 
   _cardType: 4
+  _cardTex: {fileID: 2800000, guid: c5b6b1cc71ab3794a99e4532f4a7528d, type: 3}
   _cardModel: {fileID: 5692372873059748252, guid: c6bc8f0a48423094bade9e056fbace32, type: 3}
   _amount: 50
   _cardID: 5

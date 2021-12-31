@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Coin
   m_EditorClassIdentifier: 
   _cardType: 5
+  _cardTex: {fileID: 2800000, guid: df235954ac06c7f4fa9fe7b63a5b715d, type: 3}
   _cardModel: {fileID: 2070511690500136972, guid: 2be458b60e2ea594bb168a273ccb776a, type: 3}
   _amount: 40
   _cardID: 6

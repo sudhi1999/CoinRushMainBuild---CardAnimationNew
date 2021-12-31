@@ -14,7 +14,43 @@ public class CardDeckAnimation : MonoBehaviour
     {
         this.GetComponent<Image>().sprite = cardSprite;
     }
-    public void OnPos(Vector3 lastPos, float rotationZ)
+
+
+
+    public void OnJokerChooseAnimation()
+    {
+        transform.localEulerAngles = Vector3.zero;
+
+        Animation anim = GetComponent<Animation>();
+        AnimationCurve CurvePosY;
+        AnimationCurve CurveScale;
+        AnimationClip clip = new AnimationClip();
+        clip.legacy = true;
+
+        Keyframe[] PosY;
+        PosY = new Keyframe[2];
+        PosY[0] = new Keyframe(.3f, 716f);
+        PosY[1] = new Keyframe(1f, 950f);
+
+        CurvePosY = new AnimationCurve(PosY);
+
+        Keyframe[] Scale;
+        Scale = new Keyframe[2];
+        Scale[0] = new Keyframe(.5f, 2f);
+        Scale[1] = new Keyframe(1.0f, .7f);
+
+        CurveScale = new AnimationCurve(Scale);
+
+
+        clip.SetCurve("", typeof(Transform), "localScale.y", CurveScale);
+        clip.SetCurve("", typeof(Transform), "localScale.x", CurveScale);
+        clip.SetCurve("", typeof(Transform), "localScale.z", CurveScale);
+        clip.SetCurve("", typeof(Transform), "localPosition.y", CurvePosY);
+        anim.AddClip(clip, clip.name);
+        anim.Play(clip.name);
+
+    }
+    public void PlayOnDropAnimation(Vector3 lastPos, float rotationZ)
     {
 
         rotationZ = (rotationZ > 180) ? rotationZ - 360 : rotationZ;
@@ -62,20 +98,20 @@ public class CardDeckAnimation : MonoBehaviour
 
 
 
-      /*  Keyframe[] Scale;
+        Keyframe[] Scale;
         Scale = new Keyframe[2];
         Scale[0] = new Keyframe(0f, 2f);
-        Scale[1] = new Keyframe(1.0f, 0.7f);*/
+        Scale[1] = new Keyframe(1.0f, 0.7f);
 
       
 
 
 
-       /* CurveScale= new AnimationCurve(Scale);*/
+        CurveScale= new AnimationCurve(Scale);
         
-        /*clip.SetCurve("", typeof(Transform), "localScale.y", CurveScale);
+        clip.SetCurve("", typeof(Transform), "localScale.y", CurveScale);
         clip.SetCurve("", typeof(Transform), "localScale.x", CurveScale);
-        clip.SetCurve("", typeof(Transform), "localScale.z", CurveScale);*/
+        clip.SetCurve("", typeof(Transform), "localScale.z", CurveScale);
         clip.SetCurve("", typeof(Transform), "localPosition.y", CurvePosY);
         clip.SetCurve("", typeof(Transform), "localPosition.x", CurvePosX);
         clip.SetCurve("", typeof(Transform), "localEulerAngles.z", rotationCurv);

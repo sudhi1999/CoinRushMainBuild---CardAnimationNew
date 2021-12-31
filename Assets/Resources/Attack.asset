@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Attack
   m_EditorClassIdentifier: 
   _cardType: 0
+  _cardTex: {fileID: 2800000, guid: 8283b901d912a8c48b423ab530c361bb, type: 3}
   _cardModel: {fileID: 5094012158766175565, guid: 87c5b0457225bbb4697ba3a8f7c4b46f, type: 3}
   _amount: 10
   _cardID: 1
