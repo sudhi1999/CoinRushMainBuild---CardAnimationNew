@@ -52,19 +52,15 @@ public class Cards : MonoBehaviour
         anim.AddClip(clip, clip.name);
         anim.Play(clip.name);
     }
-
-
     void ChangeSprite()
     {
         gameObject.GetComponent<Image>().sprite = changeSprite;
     }
 
-
-
-    public void PlayJokerSelectionPairAnim(bool isLeft)
+    public void PlayJokerSelectionPairAnim(bool isLeft,int index)
     {
         prePos = new Vector2(transform.localPosition.x, transform.localPosition.y);
-        float inPosX = 250;
+        float inPosX = index==1?312:372;
         inPosX = isLeft ? inPosX * -1 : inPosX;
         Animation anim = GetComponent<Animation>();
 
@@ -84,7 +80,7 @@ public class Cards : MonoBehaviour
         Keyframe[] PosX;
         PosX = new Keyframe[2];
         PosX[0] = new Keyframe(0f, transform.localPosition.x);
-        PosX[1] = new Keyframe(1f, transform.localPosition.x+inPosX);
+        PosX[1] = new Keyframe(1f, inPosX);
       
         CurvePosX = new AnimationCurve(PosX);
         clip.SetCurve("", typeof(Transform), "localPosition.y", CurvePosY);
@@ -105,7 +101,7 @@ public class Cards : MonoBehaviour
         Keyframe[] PosY;
         PosY = new Keyframe[2];
         PosY[0] = new Keyframe(0f, transform.localPosition.y);
-        PosY[1] = new Keyframe(.45f, prePos.y);
+        PosY[1] = new Keyframe(.4f, prePos.y);
 
         CurvePosY = new AnimationCurve(PosY);
 
@@ -113,7 +109,7 @@ public class Cards : MonoBehaviour
         Keyframe[] PosX;
         PosX = new Keyframe[2];
         PosX[0] = new Keyframe(0f, transform.localPosition.x);
-        PosX[1] = new Keyframe(.45f, prePos.x);
+        PosX[1] = new Keyframe(.4f, prePos.x);
 
         CurvePosX = new AnimationCurve(PosX);
         clip.SetCurve("", typeof(Transform), "localPosition.y", CurvePosY);
@@ -152,14 +148,12 @@ public class Cards : MonoBehaviour
 
         }
 
-
         Keyframe[] PosY;
         PosY = new Keyframe[2];
         PosY[0] = new Keyframe(0f, transform.localPosition.y);
         PosY[1] = new Keyframe(1f, 716);
       
         CurvePosY = new AnimationCurve(PosY);
-
 
         Keyframe[] PosX;
         PosX = new Keyframe[4];
